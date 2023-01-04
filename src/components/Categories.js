@@ -31,7 +31,7 @@ export const Categories = () => {
     return <CategoryBtn genre={item} />;
   });
   return (
-    <div className="flex flex-wrap md:flex-row flex-col  items-center justify-center gap-[40px] mt-[50px] ">
+    <div className="flex flex-wrap md:flex-row flex-col  items-center justify-center gap-[40px] mt-[50px] mb-[20px] ">
       {genreBtnArray}
     </div>
   );
