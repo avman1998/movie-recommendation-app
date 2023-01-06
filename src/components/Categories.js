@@ -19,6 +19,14 @@ export const Categories = () => {
       id: 35,
     },
     {
+      name: "Crime",
+      id: 80,
+    },
+    {
+      name: "Drama",
+      id: 18,
+    },
+    {
       name: "Romance",
       id: 10749,
     },
@@ -31,7 +39,7 @@ export const Categories = () => {
     return <CategoryBtn genre={item} />;
   });
   return (
-    <div className="flex flex-wrap flex-row   items-center justify-center gap-[40px] mt-[50px] mb-[20px] ">
+    <div className="flex flex-wrap flex-row   items-center justify-center gap-[25px] mt-[20px] mb-[20px] ">
       {genreBtnArray}
     </div>
   );
@@ -46,7 +54,7 @@ function CategoryBtn({ genre }) {
   }
   return (
     <button
-      className=" w-[150px] md:w-1/4 px-[30px] py-[10px] text-center font-bold text-[110%] bg-gray-300  rounded shadow-md shadow-gray-500 hover:text-gray-300 hover:bg-black hover:shadow-md hover:shadow-black hover:transition-shadow hover:duration-500 "
+      className=" w-[100px]  px-[5px] py-[10px] text-center font-bold text-[80%] bg-gray-300  rounded shadow-md shadow-gray-500 hover:text-gray-300 hover:bg-black hover:shadow-md hover:shadow-black hover:transition-shadow hover:duration-500 "
       onClick={() => getData(genre.id)}
     >
       {genre.name}
