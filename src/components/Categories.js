@@ -57,17 +57,19 @@ export const Categories = () => {
     );
   });
   async function getQuery() {
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=5c154ee0124acaaa75525eb289958657&language=en-US&query=${search}&page=1&include_adult=false`;
-    try {
-      setLoader(true);
-      const res = await fetch(url);
-      const data = await res.json();
-      setMovies(data.results);
-      setLoader(false);
-    } catch (err) {
-      console.log(err);
+    if (search) {
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=5c154ee0124acaaa75525eb289958657&language=en-US&query=${search}&page=1&include_adult=false`;
+      try {
+        setLoader(true);
+        const res = await fetch(url);
+        const data = await res.json();
+        setMovies(data.results);
+        setLoader(false);
+      } catch (err) {
+        console.log(err);
+      }
+      setSearch("");
     }
-    setSearch("");
   }
   const [search, setSearch] = useState("");
   return (
